@@ -1,0 +1,49 @@
+.main {
+    background-color: rgb(227, 206, 71);
+    height: 380px;
+}
+
+.text-block {
+    margin: 0 auto;
+}
+
+.first-text {
+    margin: 0 auto;
+    font-family: 'Open sans';
+}
+
+.secon-text {
+    margin: 0 auto;
+}
+
+.change-input1 {
+    height: 50px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.change-input {
+    height: 50px;
+}
+
+.change-input2 {
+    height: 50px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.btn {
+    margin-top: 10px;
+    height: 50px;
+    width: 200px;
+    border-radius: 20px;
+    background-color: rgb(73, 152, 199) ;
+}
+
+.btn:hover {
+    margin-top: 10px;
+    height: 52px;
+    width: 202px;
+    border-radius: 20px;
+    background-color: rgb(55, 117, 153) ;
+}
