@@ -1,0 +1,34 @@
+.header {
+    background-color: rgb(73, 152, 199);
+    height: 100px;
+    width: 100%;
+}
+
+.container
+
+.main-block {
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    margin-top: 30px;
+    text-decoration: none;
+    font-family: 'Open sans';
+    font-size: 400;
+    color: black;
+}
+
+.nav_link {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    width: 320px;
+}
+
+.nav_link-item {
+    text-decoration: none;
+    font-family: 'Open sans';
+    font-size: 400;
+    color: black;
+}
