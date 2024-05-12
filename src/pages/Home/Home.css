@@ -38,6 +38,7 @@
     width: 200px;
     border-radius: 20px;
     background-color: rgb(73, 152, 199) ;
+    font-family: 'Open sans';
 }
 
 .btn:hover {
@@ -46,4 +47,9 @@
     width: 198px;
     border-radius: 20px;
     background-color: rgb(55, 117, 153) ;
+    font-family: 'Open sans';
+}
+
+.second-text {
+    font-family: 'Open sans';
 }
