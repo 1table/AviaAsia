@@ -11,14 +11,17 @@ import About from './pages/About/About';
 function App() {
   return (
     <div className="App">
-      <BrowserRouter>
+      {/* <BrowserRouter> */}
       <Header />
-      <Routes>
-        <Route path ='/Home' element={<Home />} />
-        <Route path ='/About' element={<About />} />
-        <Route path ='/Support' element={<Support />} />
+      <Home />
+      <About />
+      <Support />
+      {/* <Routes> */}
+        {/* <Route path ='/Home' element={<Home />} />
+        <Route path ='/About' element={} />
+        <Route path ='/Support' element={} />
       </Routes>
-      </BrowserRouter>
+      </BrowserRouter> */}
       
     </div>
   );
