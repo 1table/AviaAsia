@@ -11,17 +11,14 @@ import About from './pages/About/About';
 function App() {
   return (
     <div className="App">
-      {/* <BrowserRouter> */}
+      <BrowserRouter>
       <Header />
-      <Home />
-      <About />
-      <Support />
-      {/* <Routes> */}
-        {/* <Route path ='/Home' element={<Home />} />
-        <Route path ='/About' element={} />
-        <Route path ='/Support' element={} />
+      <Routes>
+        <Route path ='/Главная' element={<Home/>} />
+        <Route path ='/О нас' element={<About/>} />
+        <Route path ='/Контакты' element={ <Support />} />
       </Routes>
-      </BrowserRouter> */}
+      </BrowserRouter> 
       
     </div>
   );
