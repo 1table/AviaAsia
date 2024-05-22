@@ -5,7 +5,7 @@ import {BrowserRouter, Route, Routes} from 'react-router-dom'
 
 import Home from './pages/Home/Home';
 import Support from './pages/Support/Support'
-import Header from './pages/Header/Header'
+import Header from './Header/Header'
 import About from './pages/About/About';
 
 function App() {

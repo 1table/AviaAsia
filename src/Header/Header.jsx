@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Header = () => {
   return (
@@ -13,10 +14,10 @@ const Header = () => {
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="#">Home</a>
+        <Link to={'/Главная'} class="nav-link" >Главная</Link>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
+        <Link to={'/О нас'} class="nav-link" >О нас</Link>
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -30,7 +31,7 @@ const Header = () => {
         </div>
       </li>
       <li class="nav-item">
-        <a class="nav-link disabled" href="#">Disabled</a>
+        <Link to={'/Контакты'} class="nav-link" >Контакты</Link>
       </li>
     </ul>
   </div>
@@ -40,3 +41,4 @@ const Header = () => {
 }
 
 export default Header
+
