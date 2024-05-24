@@ -1,0 +1,46 @@
+.main {
+    background-color: rgb(30, 59, 190);
+    height: 700px;
+}
+
+.text-block {
+    margin: 0 auto;
+}
+
+.first-text {
+    margin: 0 auto;
+    color: white;
+}
+
+.second-text {
+    margin: 0 auto;
+    margin-top: 70px;
+    color: white;
+}
+
+.change-input1 {
+    margin-top: 70px;
+    width: 250px;
+    height: 70px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.change-input {
+    height: 70px;
+    width: 250px;
+}
+
+.change-input2 {
+    height: 70px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    width: 250px;
+}
+
+.btn {
+    margin-top: 20px;
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+
