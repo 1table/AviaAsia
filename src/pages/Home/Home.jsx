@@ -1,6 +1,23 @@
-import React from 'react'
+import React, {useEffect,useState} from 'react'
 import './Home.css'
+
 const Home = () => {
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    const fetchTabData = async () => {
+        try {
+            const response = await fetch(`http://localhost:3002/countries`)
+            const data = await response.json()
+            setData(data)
+        }
+        catch (e) {
+            console.log(e, 'что-то пошло не так');
+        }
+    }
+
+    fetchTabData()
+}, [])
   return (
     <div className='main'>
       <div className="container">
