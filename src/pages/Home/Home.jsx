@@ -19,7 +19,6 @@ const Home = () => {
 
     fetchTabData()
 }, [])
-
   return (
     <div className='main'>
       <div className="container">
