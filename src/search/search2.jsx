@@ -5,6 +5,8 @@ import './search.css';
 const Search = () => {
     const [data, setData] = useState([]);
     const [value, setValue] = useState('');
+    const [filteredData, setFilteredData] = useState([]);
+    const [showResults, setShowResults] = useState(false);
 
     useEffect(() => {
         const fetchTabData = async () => {
@@ -25,9 +27,12 @@ const Search = () => {
         window.open('/', '_blank');
     };
 
-    const filteredCountries = data.filter(country => {
-        return country.title.toLowerCase().includes(value.toLowerCase());
-    });
+    const handleKeyPress = (event) => {
+        if (event.key === 'Enter') {
+            setFilteredData(data.filter(country => country.title.toLowerCase().includes(value.toLowerCase())));
+            setShowResults(true);
+        }
+    };
 
     return (
         <div>
@@ -36,11 +41,12 @@ const Search = () => {
                     type='text'
                     className='search-country'
                     onChange={(event) => setValue(event.target.value)}
+                    onKeyDown={handleKeyPress}
                 />
-                <Link to={'/'}><button type="button" className="search-btn">Найти</button></Link>
+                <button type="button" className="search-btn">Найти</button>
             </div>
-            <div className='search-block'>
-                {filteredCountries.map(country => (
+            <div className='search-block' style={{ display: showResults && filteredData.length > 0 ? 'block' : 'none' }}>
+                {filteredData.map(country => (
                     <div key={country.id}>
                         <div>
                             <span onClick={() => handleSpanClick2(country.title)} className='country-span'>{country.title}</span>
