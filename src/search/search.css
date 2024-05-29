@@ -1,0 +1,28 @@
+.search-block {
+    position: absolute;
+    left: 110px;
+    top: 350px;
+    background-color: rgb(255, 255, 255);
+    width: 248px;
+    height: 100%;
+}
+
+.search-country {
+    position: absolute;
+    top: 75px;
+    right: 500px;
+    width: 717px;
+    height: 50px;
+    border-radius: 5px;
+}
+
+.search-btn{
+    background-color: rgb(30, 59, 190);
+    border: none;
+    border-radius: 5px;
+    top: 75px;
+    width: 120px;
+    height: 50px;
+    position: absolute;
+    right: 375px;
+}
