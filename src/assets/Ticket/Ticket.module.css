@@ -1,0 +1,33 @@
+.ticket {
+  width: 300px;
+  padding: 20px;
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+  margin-top: 50px;
+  text-align: center;
+}
+
+.ticket h2 {
+  margin-top: 0;
+}
+
+.ticket_button {
+  background-color: #284281;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 10px 0;
+  cursor: pointer;
+}
+
+.ticket_button:hover {
+  background-color: #1b1956;
+}

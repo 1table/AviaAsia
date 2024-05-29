@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Ticket from '../Ticket/Ticket';
+import s from './RegistrationForm.module.css'
 
 function RegistrationForm() {
   const [firstName, setFirstName] = useState('');
@@ -23,32 +24,32 @@ function RegistrationForm() {
 
   return (
     <>
-      <form onSubmit={handleSubmit} className="registration_container"> 
-        <div className="registration_div">
+      <form onSubmit={handleSubmit} className={s.registration_container}> 
+        <div className={s.registration_div}>
           First Name:
           <input
             type="text"
             value={firstName}
             onChange={(e) => setFirstName(e.target.value)}
-            className="registration_input"
+            className={s.registration_input}
           />
         </div>
-        <div className="registration_div">
+        <div className={s.registration_div}>
           Last Name:
           <input
             type="text"
             value={lastName}
             onChange={(e) => setLastName(e.target.value)}
-            className="registration_input"
+            className={s.registration_input}
           />
         </div>
-        <div className="registration_div">
+        <div className={s.registration_div}>
           Email:
           <input
             type="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className="registration_input"
+            className={s.registration_input}
           />
         </div>
         <div>
@@ -58,7 +59,7 @@ function RegistrationForm() {
           </select>
           
         </div>
-        <div className="registration_div">
+        <div className={s.registration_div}>
           Seat Preference:
           <select value={seat} onChange={(e) => setSeat(e.target.value)}>
             <option value="">Select a seat</option>
@@ -83,25 +84,25 @@ function RegistrationForm() {
             <option value="3C"> 3F </option>
           </select>
         </div>
-        <div className="registration_div">
+        <div className={s.registration_div}>
         Departure Date:
         <input
           type="date"
           value={departureDate} // Changed to departureDate
           onChange={(e) => setDepartureDate(e.target.value)}
-          className="registration_input"
+          className={s.registration_input}
         />
       </div>
-      <div className="registration_div">
+      <div className={s.registration_div}>
         Arrival Date:
         <input
           type="date"
           value={arrivalDate}
           onChange={(e) => setArrivalDate(e.target.value)}
-          className="registration_input"
+          className={s.registration_input}
         />
         </div>
-        <button type="submit" className="registration_button">Buy</button>
+        <button type="submit" className={s.registration_button}>Buy</button>
       </form>
 
       {/* {Ticket && < Ticket firstName={firstName} lastName={lastName} email={email} seat={seat} departureTime={departureTime} arrivalTime={arrivalTime} Class={Class} onClose={handleClose} />}
