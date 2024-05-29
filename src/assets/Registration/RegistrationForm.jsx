@@ -31,7 +31,7 @@ function RegistrationForm() {
     <>
       <form onSubmit={handleSubmit} className={s.registration_container}> 
         <div className={s.registration_div}>
-          First Name:
+          Имя:
           <input
             type="text"
             value={firstName}
@@ -40,7 +40,7 @@ function RegistrationForm() {
           />
         </div>
         <div className={s.registration_div}>
-          Last Name:
+          Фамилия:
           <input
             type="text"
             value={lastName}
@@ -58,6 +58,7 @@ function RegistrationForm() {
           />
         </div>
         <div>
+          Класс:
           <select value={Class} onChange={(e) => setClass(e.target.value)}>
             <option value="econom">эконом</option>
             <option value="business">бизнес</option>
@@ -67,7 +68,7 @@ function RegistrationForm() {
           
         </div>
         <div className={s.registration_div}>
-          Seat Preference:
+         Предпочтение места:
           <select value={seat} onChange={(e) => setSeat(e.target.value)}>
             <option value="">Select a seat</option>
             <option value="1A"> 1A </option>
@@ -92,7 +93,7 @@ function RegistrationForm() {
           </select>
         </div>
         <div className={s.registration_div}>
-        Departure Date:
+        Дата отбытия:
         <input
           type="date"
           value={departureDate} 
@@ -101,7 +102,7 @@ function RegistrationForm() {
         />
       </div>
       <div className={s.registration_div}>
-        Arrival Date:
+       Дата прибытия:
         <input
           type="date"
           value={arrivalDate}
@@ -109,8 +110,7 @@ function RegistrationForm() {
           className={s.registration_input}
         />
         </div>
-        {/* <button type="submit" className={s.registration_button}>Buy</button> */}
-      <button type="submit" className={s.registration_button} class="btn btn-primary btn-lg">Найти билет</button>
+      <button type="submit" className={s.registration_button} class="btn btn-primary btn-lg">Купить билет</button>
       </form> 
 
       {/* {Ticket && < Ticket firstName={firstName} lastName={lastName} email={email} seat={seat} departureTime={departureTime} arrivalTime={arrivalTime} Class={Class} onClose={handleClose} />}

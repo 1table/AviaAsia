@@ -21,7 +21,7 @@ const SearchForm = () => {
 
   return (
     <div className="change-block">
-      <Link to={'/search'} className="where">
+      <Link to={'/search'} className="from">
         <input
           type='search'
           value={inputValue}
@@ -31,7 +31,7 @@ const SearchForm = () => {
           onChange={(e) => setInputValue(e.target.value)}
         />
       </Link>
-      <Link to={'/search2'} className="back">
+      <Link to={'/search2'} className="to">
         <input
           type="search"
           value={inputValue2}
