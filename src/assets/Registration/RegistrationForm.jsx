@@ -1,25 +1,29 @@
 import React, { useState } from 'react';
-
+import Ticket from '../Ticket/Ticket';
 
 function RegistrationForm() {
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
   const [email, setEmail] = useState('');
   const [seat, setSeat] = useState('');
-  const [Ticket, setTicket] = useState('');
+  // const [Ticket, setTicket] = useState(false);
+  const [isTicket, setIsTicket] = useState(false);
   const [departureTime, setDepartureTime] = useState('');
   const [arrivalTime, setArrivalTime] = useState('');
   const [Class, setClass] = useState('');
 
-
   const handleSubmit = (event) => {
     event.preventDefault();
-    setTicket(true);
+    setIsTicket(true);
+  };
+
+  const handleClose = () => {
+    setIsTicket(false);
   };
 
   return (
     <>
-      <form onSubmit={handleSubmit} className="registration_container">
+      <form onSubmit={handleSubmit} className="registration_container"> 
         <div className="registration_div">
           First Name:
           <input
@@ -100,18 +104,17 @@ function RegistrationForm() {
         <button type="submit" className="registration_button">Buy</button>
       </form>
 
-      {Ticket && (
-        <div className="ticket">
-        <h2>Airline Ticket</h2>
-        <p>Name: {firstName} {lastName}</p>
-        <p>Email: {email}</p>
-        <p>Seat Preference: {seat}</p>
-        <p>Departure Time: {departureTime}</p>
-        <p>Arrival Time: {arrivalTime}</p>
-        <p>Class:  {Class}</p>
-        <button onClick={() => setTicket(false)} className="ticket_button">Close</button>
-        </div>
-      )}
+      {/* {Ticket && < Ticket firstName={firstName} lastName={lastName} email={email} seat={seat} departureTime={departureTime} arrivalTime={arrivalTime} Class={Class} onClose={handleClose} />}
+    </> */}
+    {isTicket && 
+      <Ticket firstName={firstName} 
+      lastName={lastName} 
+      email={email} 
+      seat={seat} 
+      departureTime={departureTime} 
+      arrivalTime={arrivalTime} 
+      Class={Class} 
+      onClose={handleClose} />}
     </>
   );
 }

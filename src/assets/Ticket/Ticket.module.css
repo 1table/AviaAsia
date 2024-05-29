@@ -1,0 +1,51 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.ticket h2 {
+  margin-top: 0;
+  font-weight: bold;
+  color: #333;
+}
+
+.ticket p {
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #666;
+}
+
+.ticket_button {
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.ticket_button:hover {
+  background-color: #3e8e41;
+}
+
+.ticket_button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
