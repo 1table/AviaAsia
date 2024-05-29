@@ -8,8 +8,8 @@ function RegistrationForm() {
   const [seat, setSeat] = useState('');
   // const [Ticket, setTicket] = useState(false);
   const [isTicket, setIsTicket] = useState(false);
-  const [departureTime, setDepartureTime] = useState('');
-  const [arrivalTime, setArrivalTime] = useState('');
+  const [departureDate, setDepartureDate] = useState('');
+  const [arrivalDate, setArrivalDate] = useState('');
   const [Class, setClass] = useState('');
 
   const handleSubmit = (event) => {
@@ -84,22 +84,22 @@ function RegistrationForm() {
           </select>
         </div>
         <div className="registration_div">
-          Departure Time:
-          <input
-            type="time"
-            value={departureTime}
-            onChange={(e) => setDepartureTime(e.target.value)}
-            className="registration_input"
-          />
-        </div>
-        <div className="registration_div">
-          Arrival Time:
-          <input
-            type="time"
-            value={arrivalTime}
-            onChange={(e) => setArrivalTime(e.target.value)}
-            className="registration_input"
-          />
+        Departure Date:
+        <input
+          type="date"
+          value={departureDate} // Changed to departureDate
+          onChange={(e) => setDepartureDate(e.target.value)}
+          className="registration_input"
+        />
+      </div>
+      <div className="registration_div">
+        Arrival Date:
+        <input
+          type="date"
+          value={arrivalDate}
+          onChange={(e) => setArrivalDate(e.target.value)}
+          className="registration_input"
+        />
         </div>
         <button type="submit" className="registration_button">Buy</button>
       </form>
@@ -111,8 +111,8 @@ function RegistrationForm() {
       lastName={lastName} 
       email={email} 
       seat={seat} 
-      departureTime={departureTime} 
-      arrivalTime={arrivalTime} 
+      departureDate={departureDate} 
+      arrivalDate={arrivalDate} 
       Class={Class} 
       onClose={handleClose} />}
     </>
