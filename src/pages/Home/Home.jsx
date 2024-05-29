@@ -5,14 +5,22 @@ import '../../search/search1'
 
 const Home = () => {
   const [inputValue, setInputValue] = useState('');
+  const [inputValue2, setInputValue2] = useState('');
 
   useEffect(() => {
     const spanValue = localStorage.getItem('spanValue');
     if (spanValue) {
       setInputValue(spanValue);
-      localStorage.removeItem('spanValue');
     }
   }, []);
+
+  useEffect(() => {
+    const spanValue2 = localStorage.getItem('spanValue2');
+    if (spanValue2) {
+      setInputValue2(spanValue2);
+    }
+  }, []);
+  
   return (
     <div className='main'>
       <div className="container">
@@ -22,7 +30,7 @@ const Home = () => {
           <h3 className=' second-text'>Помогаем вам экономить</h3>
           <div className="change-block">
             <Link to={'/search'} className="change-span"><input type='search' value={inputValue} className='change-input1' placeholder='откуда'  aria-label='search'/></Link>
-            <Link to={'/search2'} className="change-span"><input type="search" className='change-input'aria-label='search'  placeholder='куда'/></Link>
+            <Link to={'/search2'} className="change-span"><input type="search" value={inputValue2} className='change-input'aria-label='search'  placeholder='куда'/></Link>
             <span className="change-span"><input type="text" className='change-input' placeholder='когда'/></span>
             <span className="change-span"><input type="text" className='change-input' placeholder='обратно'/></span>
             <span className="change-span"><input type="text" className='change-input2' placeholder=''/></span>
