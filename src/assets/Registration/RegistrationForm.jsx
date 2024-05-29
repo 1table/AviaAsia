@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import Ticket from '../Ticket/Ticket';
 import s from './RegistrationForm.module.css'
 
+import SearchForm from '../SeachForm/SeachForm';
+
 function RegistrationForm() {
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
@@ -12,6 +14,9 @@ function RegistrationForm() {
   const [departureDate, setDepartureDate] = useState('');
   const [arrivalDate, setArrivalDate] = useState('');
   const [Class, setClass] = useState('');
+
+  const [inputValue, setInputValue] = useState('');
+  const [inputValue2, setInputValue2] = useState('');
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -57,6 +62,8 @@ function RegistrationForm() {
             <option value="econom">эконом</option>
             <option value="business">бизнес</option>
           </select>
+
+          <SearchForm />
           
         </div>
         <div className={s.registration_div}>
@@ -88,7 +95,7 @@ function RegistrationForm() {
         Departure Date:
         <input
           type="date"
-          value={departureDate} // Changed to departureDate
+          value={departureDate} 
           onChange={(e) => setDepartureDate(e.target.value)}
           className={s.registration_input}
         />
@@ -102,20 +109,25 @@ function RegistrationForm() {
           className={s.registration_input}
         />
         </div>
-        <button type="submit" className={s.registration_button}>Buy</button>
-      </form>
+        {/* <button type="submit" className={s.registration_button}>Buy</button> */}
+      <button type="submit" className={s.registration_button} class="btn btn-primary btn-lg">Найти билет</button>
+      </form> 
 
       {/* {Ticket && < Ticket firstName={firstName} lastName={lastName} email={email} seat={seat} departureTime={departureTime} arrivalTime={arrivalTime} Class={Class} onClose={handleClose} />}
     </> */}
-    {isTicket && 
-      <Ticket firstName={firstName} 
-      lastName={lastName} 
-      email={email} 
-      seat={seat} 
-      departureDate={departureDate} 
-      arrivalDate={arrivalDate} 
-      Class={Class} 
-      onClose={handleClose} />}
+        {isTicket &&
+          <Ticket firstName={firstName} 
+          lastName={lastName} 
+          email={email} 
+          seat={seat} 
+          departureDate={departureDate} 
+          arrivalDate={arrivalDate} 
+          Class={Class} 
+          where={inputValue}
+          back={inputValue2}
+
+          
+          onClose={handleClose} />}
     </>
   );
 }

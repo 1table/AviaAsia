@@ -1,13 +1,15 @@
 import React from 'react';
 import s from './Ticket.module.css'
 
-const Ticket = ({ firstName, lastName, email, seat, departureDate, arrivalDate, Class, onClose }) => {
+const Ticket = ({ firstName, lastName, email, seat, departureDate, arrivalDate, Class, onClose, where, back }) => {
   return (
     <div className={s.ticket}>
       <h2>Airline Ticket</h2>
       <p>Name: {firstName} {lastName}</p>
       <p>Email: {email}</p>
       <p>Seat Preference: {seat}</p>
+      <p>From: {where}</p>
+      <p>To: {back}</p>
       <p>Departure Date: {departureDate}</p>
       <p>Arrival Date: {arrivalDate}</p>
       <p>Class:  {Class}</p>
