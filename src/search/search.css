@@ -1,19 +1,10 @@
-.search-block {
-    position: absolute;
-    left: 110px;
-    top: 350px;
-    background-color: rgb(255, 255, 255);
-    width: 248px;
-    height: 100%;
-}
-
 .search-country {
     position: absolute;
     top: 75px;
-    right: 500px;
     width: 717px;
     height: 50px;
     border-radius: 5px;
+    left: 0px;
 }
 
 .search-btn{
@@ -24,5 +15,13 @@
     width: 120px;
     height: 50px;
     position: absolute;
-    right: 375px;
+    right: 628px;
+}
+
+.search-menu {
+    height: 100px;
+}
+
+.search-block {
+    width: 130px;
 }
