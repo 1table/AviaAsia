@@ -26,9 +26,8 @@ const Home = () => {
   
   return (
     <div className='main'>
-      <div className="container">
         <div className="main-block">
-          <div className="text-block">
+          <div className="tex-block">
           <h1 className='first-text'>Билеты по скидке</h1>
           <h3 className=' second-text'>Помогаем вам экономить</h3>
           <div className="change-block">
@@ -42,7 +41,6 @@ const Home = () => {
           {/* <button type="button" class="btn btn-primary btn-lg">Найти билет</button> */}
           </div>
         </div>
-      </div>
     </div>
   )
 }
