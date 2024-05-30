@@ -1,9 +1,12 @@
 .main {
-    background-color: rgb(30, 59, 190);
+    background-image: url(../../assets/sky3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
     height: 772px;
+    
 }
 
-.text-block {
+.tex-block {
     margin: 0 auto;
 }
 
