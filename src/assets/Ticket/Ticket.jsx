@@ -1,6 +1,7 @@
 import React from 'react';
 import s from './Ticket.module.css'
 
+
 const Ticket = ({ firstName, lastName, email, seat, departureDate, arrivalDate, Class, onClose, from, to}) => {
   return (
     <div className={s.ticket}>
