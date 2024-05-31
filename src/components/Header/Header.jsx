@@ -2,13 +2,13 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import s from'./Header.module.css'
 
-import logo from '../image/logo.jpg'
+import logo from '../../assets/logo/logo.jpg'
 
 const Header = () => {
   return (
         <div className='main-header'>
         <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-          <Link to={'/'} class="navbar-brand" href="#"><img src={logo} alt="logo" /></Link>
+          <Link to={'/'} class="navbar-brand" href="#"><img className={s.logo} src={logo} alt="logo" /></Link>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>

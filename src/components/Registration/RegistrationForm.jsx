@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import Ticket from '../Ticket/Ticket';
+import Ticket from '../../components/Ticket/Ticket';
 import s from './RegistrationForm.module.css'
 
-import SearchForm from '../SeachForm/SeachForm';
+import SearchForm from '../../components/SeachForm/SeachForm';
 
 function RegistrationForm() {
   const [firstName, setFirstName] = useState('');

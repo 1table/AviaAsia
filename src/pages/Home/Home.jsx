@@ -3,9 +3,9 @@ import './Home.css'
 import { Link } from 'react-router-dom';
 // import '../../assets/search/search1'
 
-import RegistrationForm from '../../assets/Registration/RegistrationForm';
-import SearchForm from '../../assets/SeachForm/SeachForm';
-
+import RegistrationForm from '../../components/Registration/RegistrationForm';
+// import SearchForm from '../../components/SeachForm/SeachForm';
+  
 const Home = () => {
   // const [inputValue, setInputValue] = useState('');
   // const [inputValue2, setInputValue2] = useState('');

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './About.css';
-import planeImage1 from '../../assets/photo_2024-05-29_22-43-30.jpg';
-import planeImage2 from '../../assets/photo_2024-05-29_22-44-02.jpg';
+// import planeImage1 from '../../assets/photo_2024-05-29_22-43-30.jpg';
+// import planeImage2 from '../../assets/photo_2024-05-29_22-44-02.jpg';
 
 const About = ({ maxRating = 5 }) => {
     const [rating, setRating] = useState(0);
@@ -38,7 +38,7 @@ const About = ({ maxRating = 5 }) => {
                         </div>
                     ))}
                 </div>
-                <img src={planeImage1} alt="Самолет SkyHigh Airlines" className="image" />
+                {/* <img src={planeImage1} alt="Самолет SkyHigh Airlines" className="image" /> */}
                 <div className="text-block">
                     <p>
                         SkyHigh Airlines — это ведущая авиакомпания, предоставляющая широкий спектр услуг для пассажиров.
@@ -52,7 +52,7 @@ const About = ({ maxRating = 5 }) => {
                         обеспечивая пассажирам удобные стыковки и высокий уровень сервиса на борту.
                     </p>
                 </div>
-                <img src={planeImage2} alt="Самолет SkyHigh Airlines" className="image" />
+                {/* <img src={planeImage2} alt="Самолет SkyHigh Airlines" className="image" /> */}
                 <div className="text-block">
                     <p>
                         Мы стремимся к устойчивому развитию и активно работаем над сокращением нашего экологического
