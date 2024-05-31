@@ -1,49 +1,82 @@
-.main {
-    /* background-image: url(../../assets/sky3.jpg); */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.first-section {
+    position: relative;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0),
+     rgba(25, 85, 133, 0.666)),
+     url(../../assets/background/background1.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+
+
     height: 772px;
+    width: 100%;
+}
+
+h1 {
+    position: absolute;
+    color: rgb(13, 34, 75);
+    font-size: 60px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    left: 100px;
+    top: 200px;
+}
+
+
+
+.third-section {
+    width: 100%;
+    height: 900px;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.717),
+     rgba(247, 247, 247, 0.666)),
+     url(../../assets/background/background2.jpeg);
+
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+
+h2 {
+    color: rgb(6, 45, 118);
+    text-align: center;
+    padding-top: 100px;
+    font-size: 58px;
+}
+
+.card-container {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    padding: 50px 100px;
+  }
+
+.card-section {
+    position: relative;
+    width: 600px;
+    height: 230px;
     
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(7, 75, 185, 0.628);
 }
 
-.tex-block {
-    margin: 0 auto;
+.card-section h3 {
+    background-color: rgb(19, 37, 100);
+    color: rgba(255, 255, 255, 0.89);
+    font-size: 35px;
+    width: 130px;
+    height: 50px;
+    border-radius: 5px;
 }
 
-.first-text {
-    margin: 0 auto;
-    color: white;
+.card-section p {
+    font-size: 20px;
+    color: rgba(18, 29, 71, 0.521);
 }
-
-.second-text {
-    margin: 0 auto;
-    margin-top: 70px;
-    color: white;
-}
-
-.change-input1 {
-    margin-top: 70px;
-    width: 250px;
-    height: 70px;
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
-}
-
-.change-input {
-    height: 70px;
-    width: 250px;
-}
-
-.change-input2 {
-    height: 70px;
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
-    width: 250px;
-}
-
-.btn {
-    margin-top: 20px;
-    background-color: rgb(0, 0, 0);
-    color: white;
-}
-
