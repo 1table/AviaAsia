@@ -1,31 +1,22 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import s from'./Header.module.css'
-
+import React from 'react';
+import { Link } from 'react-router-dom';
 import logo from '../../assets/logo/logo.jpg'
+import './Header.css'
+
 
 const Header = () => {
-  return (
-        <div className='main-header'>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-          <Link to={'/'} class="navbar-brand" href="#"><img className={s.logo} src={logo} alt="logo" /></Link>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-              <li class="nav-item active">
-                <Link to={'/'} class="nav-link" >Главная</Link>
-              </li>
-              <li class="nav-item">
-                <Link to={'/about'} class="nav-link" >О нас</Link>
-              </li>
-            </ul>
-          </div>
-        </nav>
-
-    </div>
-  )
+    return (
+        <div className="main-header">
+            <nav className="main-nav">
+                <Link to={'/'}><img className='logo' src={logo} alt="logo" /></Link>
+                {/* <Link to={'/'}>logo</Link> */}
+                <div className="nav-links">
+                    <Link to={'/'} className="nav-link">Главная</Link>
+                    <Link to={'/about'} className="nav-link">О нас</Link>
+                </div>
+            </nav>
+        </div>
+    );
 }
 
-export default Header
+export default Header;

@@ -1,6 +1,8 @@
 import React, {useState, useEffect} from 'react';
 import './Home.css'
 import { Link } from 'react-router-dom';
+
+import Registration from '../Registration/Registration';
 // import '../../assets/search/search1'
 
 // import Carousel from '../../components/Carousel/Carousel'
@@ -30,6 +32,8 @@ const Home = () => {
           <section className='first-section'>
            <h1 className='first-text'>Покупайте быстро и удобно
            <br/> в любое время</h1>
+           {/* <button type="submit" className='registration_button' >Купить билет</button> */}
+           <button onClick={() => {window.location.assign('/registration')}} type="submit" className='registration_button' >Купить билет</button>
             
           </section>
           <section className='second-section'>
@@ -77,7 +81,6 @@ const Home = () => {
               </div>
 
 
-              {/* <RegistrationForm /> */}
               {/* <Link to={'/search'} className="change-span"><input type='search' value={inputValue} className='change-input1' placeholder='откуда'  aria-label='search'/></Link>
               <Link to={'/search2'} className="change-span"><input type="search" value={inputValue2} className='change-input'aria-label='search'  placeholder='куда'/></Link>
               <span className="change-span"><input type="text" className='change-input' placeholder='когда'/></span>

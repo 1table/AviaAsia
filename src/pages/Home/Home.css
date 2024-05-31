@@ -13,8 +13,8 @@
     background-repeat: no-repeat;
     background-size: cover;
 
-
-    height: 772px;
+    margin-top: 70px;
+    height: 872px;
     width: 100%;
 }
 
@@ -66,6 +66,11 @@ h2 {
     padding: 20px;
     box-shadow: 0 0 10px rgba(7, 75, 185, 0.628);
 }
+
+.card-section:hover {
+    transform: scale(1.05); /* increase scale on hover */
+    box-shadow: 0 0 20px rgba(7, 75, 185, 0.8); /* increase box-shadow on hover */
+  }  
 
 .card-section h3 {
     background-color: rgb(19, 37, 100);
