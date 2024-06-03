@@ -9,6 +9,7 @@ import About from './pages/About/About';
 import Search from './components/search/search1'
 import Search2 from './components/search/search2'
 import Registration from './pages/Registration/Registration';
+import RegistrationForm from './components/RegistrationForm/RegistrationForm';
 // import Ticket from './assets/Registration/RegistrationForm'
 
 
@@ -16,7 +17,8 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
-      <Header />
+      {/* <Header /> */}
+      <RegistrationForm />
       <Routes>
         <Route path ='/' element={<Home/>} />
         <Route path ='/about' element={<About/>} />
