@@ -21,6 +21,7 @@ const SearchForm = () => {
 
   return (
     <div className="change-block">
+      <p>Откуда:                Куда:</p>
       <Link to={'/search'} className="from">
         <input
           type='search'

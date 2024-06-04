@@ -9,26 +9,31 @@
   margin-top: 50px;
   text-align: center;
   position: fixed;
-  top: 40%;
+  top: 20%;
   right: 5%;
 }
 
+
 .ticket h2 {
   margin-top: 0;
+  font-size: 20px;
+}
+
+.ticket p {
+  margin: 5px 0;
 }
 
 .ticket_button {
-  background-color: #284281;
-  color: white;
+  background-color: #000000;
+  color: #fff;
+  padding: 10px 20px;
   border: none;
   border-radius: 5px;
-  padding: 10px 20px;
-  text-align: center;
-  display: inline-block;
-  font-size: 16px;
-  margin: 10px 0;
+  cursor: pointer;
 }
 
 .ticket_button:hover {
-  background-color: #1b1956;
+  background-color: #8d002a;
 }
+
+

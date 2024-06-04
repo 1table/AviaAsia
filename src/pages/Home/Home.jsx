@@ -1,8 +1,7 @@
-import React, {useState, useEffect} from 'react';
+import React from 'react';
 import './Home.css'
 import { Link } from 'react-router-dom';
 
-import Registration from '../Registration/Registration';
 // import '../../assets/search/search1'
 
 // import Carousel from '../../components/Carousel/Carousel'
@@ -33,7 +32,8 @@ const Home = () => {
            <h1 className='first-text'>Покупайте быстро и удобно
            <br/> в любое время</h1>
            {/* <button type="submit" className='registration_button' >Купить билет</button> */}
-           <button onClick={() => {window.location.assign('/registration')}} type="submit" className='registration_button' >Купить билет</button>
+           <Link to={'/registration'}  className='registration_button'>Купить билет</Link>
+           {/* <button onClick={() => {window.location.assign('/registration')}} type="submit" className='registration_button' >Купить билет</button> */}
             
           </section>
           <section className='second-section'>

@@ -28,7 +28,7 @@
 .nav-links {
     display: flex;
     justify-content: space-between;
-    width: 210px;
+    width: 450px;
 }
 
 .nav-link {

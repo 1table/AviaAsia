@@ -12,6 +12,7 @@ const Header = () => {
                 {/* <Link to={'/'}>logo</Link> */}
                 <div className="nav-links">
                     <Link to={'/'} className="nav-link">Главная</Link>
+                    <Link to={'/registration'} className="nav-link">Купить билет</Link>
                     <Link to={'/about'} className="nav-link">О нас</Link>
                 </div>
             </nav>

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { isValidDateValue } from '@testing-library/user-event/dist/utils';
 import { useForm } from 'react-hook-form';
 import Ticket from '../Ticket/Ticket';
@@ -15,13 +15,35 @@ const RegistrationForm = () => {
     mode: 'onBlur',
   });
 
+
+  const [showTicket, setShowTicket] = useState(false);
+  const [ticketData, setTicketData] = useState(null);
+
   const onSubmit = (data) => {
-    alert(JSON.stringify(data));
+    setTicketData(data);
+    setShowTicket(true);
     reset();
   };
 
+  // const onSubmit = (data) => {
+  //   alert(JSON.stringify(data));
+  //   reset();
+  // };
+
   return (
     <div>
+    {showTicket ? (
+      <Ticket
+        firstName={ticketData.firstName}
+        lastName={ticketData.lastName}
+        email={ticketData.email}
+        seat={ticketData.seat}
+        departureDate={ticketData.departureDate}
+        arrivalDate={ticketData.arrivalDate}
+        Class={ticketData.Class}
+        onClose={() => setShowTicket(false)}
+      />
+    ) : (
       <form onSubmit={handleSubmit(onSubmit)} className={s.registration_container}>
         <div className={s.registration_div}>
           Имя:
@@ -78,7 +100,6 @@ const RegistrationForm = () => {
             <option value="business">бизнес</option>
           </select>
 
-          <SearchForm />
         </div>
 
         <div className={s.registration_div}>
@@ -123,20 +144,13 @@ const RegistrationForm = () => {
             {...register('arrivalDate', { required: 'поле обязательно к заполнению' })}
             className={s.registration_input}
           />
+          <SearchForm />
         </div>
-        <input type="submit" disabled={!isValid}/>
-      </form>
-
-      {isValid && (
-        <Ticket
-          firstName={register.firstName}
-          lastName={register.lastName}
-          email={register.email}
-          seat={register.seat}
-          departureDate={register.departureDate}
-          arrivalDate={register.arrivalDate}
-          Class={register.Class}
+        <input  type="submit" value="Купить билет" disabled={!isValid} 
+        className={s.registration_button}
         />
+        
+      </form>
       )}
     </div>
   );
@@ -227,7 +241,7 @@ export default RegistrationForm;
   //   const [lastName, setLastName] = useState('');
   //   const [email, setEmail] = useState('');
   //   const [seat, setSeat] = useState('');
-  //   // const [Ticket, setTicket] = useState(false);
+  //   // const [Ticket, setTicket] = useState(false);  
   //   const [isTicket, setIsTicket] = useState(false);
   //   const [departureDate, setDepartureDate] = useState('');
   //   const [arrivalDate, setArrivalDate] = useState('');

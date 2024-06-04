@@ -5,10 +5,18 @@
   background-color: #f9f9f9;
   border: 1px solid #ccc;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-top: 70px;
 }
 
 .registration_div {
   margin-bottom: 20px;
+}
+
+select {
+  margin: 20px;
+  width: 90%;
+  height: 40px;
+  
 }
 
 .registration_input {
@@ -20,7 +28,7 @@
 }
 
 .registration_button {
-  background-color: #4CAF50;
+  background-color: #000000;
   color: #fff;
   padding: 10px 20px;
   border: none;
@@ -29,7 +37,7 @@
 }
 
 .registration_button:hover {
-  background-color: #3e8e41;
+  background-color: #003e94;
 }
 
 .error {

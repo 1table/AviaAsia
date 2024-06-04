@@ -11,8 +11,8 @@ const Ticket = ({ firstName, lastName, email, seat, departureDate, arrivalDate, 
       <p>ФИО: {firstName} {lastName}</p>
       <p>Email: {email}</p>
       <p>Предпочтение места: {seat}</p>
-      <p>Откуда: {from}</p>
-      <p>Куда: {to}</p>
+      {/* <p>Откуда: {from}</p> */}
+      {/* <p>Куда: {to}</p> */}
       <p>Дата отбытия: {departureDate}</p>  
       <p>Дата прибытия: {arrivalDate}</p>
       <p>Класс:  {Class}</p>
